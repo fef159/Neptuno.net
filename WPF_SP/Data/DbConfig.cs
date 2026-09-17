@@ -2,7 +2,8 @@ namespace WPF_SP.Data;
 
 public static class DbConfig
 {
-    // Instancia local detectada: .\SQLEXPRESS. Ajustar si tu SQL Server local usa otro nombre de instancia.
+    // La captura de SSMS muestra una instancia predeterminada local.
+    // El punto (.) resuelve al nombre del equipo sin depender de que este cambie.
     public const string ConnectionString =
-        @"Server=.\SQLEXPRESS;Database=TodoListDB;Trusted_Connection=True;TrustServerCertificate=True;";
+        @"Server=.;Database=NeptunoDB;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=10;";
 }
